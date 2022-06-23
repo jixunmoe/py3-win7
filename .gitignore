@@ -1,0 +1,9 @@
+*.user
+.vs
+*.aps
+
+bin/
+x86/
+x64/
+Debug/
+Release/

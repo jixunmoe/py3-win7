@@ -1,0 +1,6 @@
+[submodule "main_dll/src/DetourXS"]
+	path = main_dll/src/DetourXS
+	url = https://github.com/JixunMoe/detourxs.git
+[submodule "DetourXS"]
+	path = DetourXS
+	url = https://github.com/DominicTobias/detourxs.git
