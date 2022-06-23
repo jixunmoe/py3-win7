@@ -8,7 +8,11 @@ Tested with the following installers:
 python-3.10.5-amd64.exe 69165821dad57c6d8d29ec8598933db7c4498f8ef9d477fa13c677fd82567b58
 ```
 
-Demo (Select installer & argv pass-through):
+## Demo
+
+1. Select installer
+2. Show case `argv` pass-through (drag & drop)
+3. Uninstall works fine with the loader (with leftover)
 
 https://user-images.githubusercontent.com/5713045/175185367-9e356f73-2f11-48ad-a49d-7cfbd01983ae.mp4
 
@@ -19,3 +23,9 @@ Windows 7 is out-of-date. Please consider upgrade to a morden OS for latest secu
 `api-ms-win-core-path-l1-1-0.dll` is taken from [`nalexandru/api-ms-win-core-path-HACK:0.3.1`][1]
 
 [1]: https://github.com/nalexandru/api-ms-win-core-path-HACK/releases/tag/0.3.1
+
+## Hooks implemented
+
+- `CreateProcessW` - Sub-process creation hook
+- `VerifyVersionInfoW` - Version check bypass
+- `MsiInstallProductW` - Inject `api-ms-win-core-path-l1-1-0.dll` after a success Python installation.
